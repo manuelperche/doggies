@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from '../header/Header';
+import Grid from '../grid/Grid';
 
 const App = () => {
   const [inputValue, setInputValue] = useState('');
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <div className="app">
       <Header inputValue={inputValue} setInputValue={setInputValue}/>
+      <Grid />
     </div>
   );
 }
