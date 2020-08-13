@@ -1,6 +1,6 @@
 .container {
     height: 200px;
-    width: 90%;
+    width: 100%;
     background-color: #4F3E36;
     left: 50%;
 }
@@ -24,15 +24,37 @@
     font-family: sans-serif;
     color: #333;
     font-size: 1.2rem;
-    margin: 0 auto;
+    margin: 0;
     padding: .5rem 1rem;
-    border-radius: 0.2rem;
     background-color: #FFF;
     border: none;
-    width: 100%;
+    width: 80%;
+    float: left;
     display: block;
     border-bottom: 0.3rem solid transparent;
     transition: all 0.3s;
+}
+
+.submit {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: #FFF;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    background: #2196F3;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
 }
 
 @media screen and (min-width: 992px) {
@@ -45,6 +67,10 @@
     }
 
     .form-input {
-        width: 70%;
+        width: 60%;
+    }
+    
+    .submit {
+        width: 10%;
     }
 }

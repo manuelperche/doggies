@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+import './Grid.css'
+import http from '../../utils/api'
 import Loader from 'react-loader-spinner'
+
 
 const Grid = (props) => {
     const [dogs, setDogs] = useState([]);
@@ -8,7 +10,7 @@ const Grid = (props) => {
 
     useEffect(() => {
         const fetchDogs = async () => {
-            const { data: { message } }  = await axios.get('https://dog.ceo/api/breeds/image/random/15');
+            const { data: { message } }  = await http('/breeds/image/random/15');
             setDogs(message)
             setIsLoading(false)
         }
@@ -16,8 +18,12 @@ const Grid = (props) => {
     }, []);
 
     return (
-        <div>
-            { isLoading ? <Loader type="TailSpin" /> : null }
+        <div className="grid">
+            { isLoading ? 
+                <Loader type="TailSpin" /> 
+                :  
+                null
+                }
         </div>
     )
 }
