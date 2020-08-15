@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="app">
       <Header inputValue={inputValue} setInputValue={setInputValue}/>
-      <Grid />
+      <Grid inputValue={inputValue} />
     </div>
   );
 }

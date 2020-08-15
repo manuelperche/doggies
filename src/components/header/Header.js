@@ -47,7 +47,7 @@ const Header = ({ inputValue, setInputValue }) => {
   }
 
   return (
-    <div className="container">
+    <div className="header-container">
       <div className="title">
         <h1 className="h1-heading">Doggies</h1>
       </div>
