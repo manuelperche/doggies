@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Suggestions from './Suggestions';
 
-const Header = ({ inputValue, setInputValue }) => {  
+const Header = ({ inputValue, setInputValue, searchDogs }) => {  
   const [dogBreeds, setDogBreeds] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
@@ -44,6 +44,7 @@ const Header = ({ inputValue, setInputValue }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setShowSearch(false)
+    searchDogs(inputValue)
   }
 
   return (
@@ -57,7 +58,7 @@ const Header = ({ inputValue, setInputValue }) => {
       </form>
       {
         showSearch ? 
-          <Suggestions searchResults={searchResults} setInputValue={setInputValue} setShowSearch={setShowSearch} />
+          <Suggestions searchResults={searchResults} setInputValue={setInputValue} setShowSearch={setShowSearch}/>
           :
           null
       }

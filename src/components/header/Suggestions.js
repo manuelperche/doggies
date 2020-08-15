@@ -11,7 +11,7 @@ const Suggestions = ({ searchResults, setInputValue, setShowSearch }) => {
         <div className="results">
             {
                 searchResults.map((result, index) => {
-                    if (index < 5) {
+                    if (index < 4) {
                         return (
                             <div className="result-container" key={index} onClick={() => handleDogClick(result)}>
                                 <h3> {result} </h3>
