@@ -4,7 +4,6 @@ import Header from '../header/Header';
 import Grid from '../grid/Grid';
 import http from '../../utils/api';
 
-
 const App = () => {
   const [inputValue, setInputValue] = useState('');
   const [images, setImages] = useState([]);
@@ -31,13 +30,16 @@ const App = () => {
     setIsLoading(false);
   };
 
-
   return (
     <div className="app">
-      <Header inputValue={inputValue} setInputValue={setInputValue} searchDogs={searchDogs}/>
+      <Header
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        searchDogs={searchDogs}
+      />
       <Grid images={images} isLoading={isLoading} />
     </div>
   );
-}
+};
 
 export default App;

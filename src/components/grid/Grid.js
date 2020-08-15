@@ -4,7 +4,6 @@ import Loader from 'react-loader-spinner';
 import Dog from './Dog';
 
 const Grid = ({ images, isLoading }) => {
-
   return (
     <div className="grid-container">
       {isLoading ? (
