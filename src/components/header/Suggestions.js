@@ -20,6 +20,8 @@ const Suggestions = ({ searchResults, setInputValue, setShowSearch }) => {
               <h3> {result} </h3>
             </div>
           );
+        } else {
+          return null
         }
       })}
     </div>

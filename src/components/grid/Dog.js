@@ -4,7 +4,7 @@ import './Grid.css';
 const Dog = ({ image }) => {
   return (
     <div className="dog-card">
-      <img src={image} />
+      <img alt='' src={image} />
     </div>
   );
 };
